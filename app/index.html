@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="recipes">
+
+	<head>
+		<meta charset="utf-8"></meta>
+		<title>Recipes</title>
+		<script src="scripts/vendor/angular.js"></script>
+		<script src="scripts/vendor/angular-resource.js"></script>
+		<script src="scripts/vendor/angular-route.js"></script>
+		
+		<script src="scripts/directive/directives.js"></script>
+		<script src="scripts/service/services.js"></script>
+		<script src="scripts/controller/controllers.js"></script>
+		
+		<link href="styles/bootstrap.css" rel="stylesheet"></link>
+		<link href="styles/recipes.css" rel="stylesheet"></link>
+	</head>
+	
+	<body>
+		<header>
+			<h1>Recipes</h1>
+		</header>
+		
+		<div loader>Loading...</div>
+		
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span2">
+					<!-- Sidebar -->
+					<div id="focus"><a href="/new">New Recipe</a></div>
+					<div><a href="/">Recipe List</a></div>
+				</div>
+			
+				<div class="span10">
+					<div ng-view></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
