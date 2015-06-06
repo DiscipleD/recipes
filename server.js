@@ -68,6 +68,18 @@ Recipes.prototype.setRecipe = function(recipe){
 	recipes.saveRecipes();
 }
 
+Recipes.prototype.removeRecipe = function(recipe){
+	for (index in recipes.recipesList){
+		
+		if (recipes.recipesList[index].id == recipe.id){
+			recipes.recipesList.splice(index, 1);
+			break;
+		}
+	}
+	
+	recipes.saveRecipes();
+}
+
 Recipes.prototype.saveRecipes = function(){
 	var data = JSON.stringify(recipes.recipesList);
 	fs.writeFile(RECIPESDBFILEPATH, data);
@@ -82,9 +94,9 @@ app.get('/recipes', function(req, res) {
     list = recipes.getRecipesList();
 
   // Simulate delay in server, just to show the loader is worked.
-//  setTimeout(function() {
+  setTimeout(function() {
     res.send(list);
-//  }, 500);
+  }, 500);
 });
 
 app.get('/recipes/:id', function(req, res) {
@@ -118,6 +130,15 @@ app.post('/recipes/:id', function(req, res) {
     recipe.instructions = req.body.instructions;
 
 	recipes.setRecipe(recipe);
+	
+	res.send(recipe);
+
+});
+
+app.delete('/recipes/:id', function(req, res) {
+    var recipe = recipes.getRecipe(req.params.id);
+
+	recipes.removeRecipe(recipe);
 	
 	res.send(recipe);
 

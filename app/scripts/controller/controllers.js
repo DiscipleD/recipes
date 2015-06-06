@@ -82,8 +82,10 @@ controllers.controller('EditCtrl', ['$scope', '$location', 'recipe', function($s
 	// delete item only at client side
 	// also can use AngularJS Resource 'delete' method, but delete is a key word in IE, so should use '$scope.recipe.$save()' or 'Recipe[delete]()' pattern
 	$scope.remove = function(){
+		$scope.recipe.$delete(function(){
+			$location.path('/');
+		});
 		delete $scope.recipe;
-		$location.path('/');
 	};
 }]);
 
