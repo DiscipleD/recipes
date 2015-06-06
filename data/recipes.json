@@ -1,13 +1,1 @@
-[{
-	"id": "1",
-	"title": "Cookies",
-	"description": "Delicious, crisp on the outside, chewy on the outside, oozing with chocolatey goodness cookies. The best kind",
-	"ingredients": [
-			{
-				"amount": "1",
-				"amountUnits": "packet",
-				"ingredientName": "Chips Ahoy"
-			}
-		],
-	"instructions": "1. Go buy a packet of Chips Ahoy\n2. Heat it up in an oven\n3. Enjoy warm cookies\n4. Learn how to bake cookies form somewhere else"
-}]
+[{"id":1,"title":"Cookies","description":"Delicious, crisp on the outside, chewy on the outside, oozing with chocolatey goodness cookies. The best kind","ingredients":[{"amount":"1","amountUnits":"packet","ingredientName":"Chips Ahoy"}],"instructions":"1. Go buy a packet of Chips Ahoy\n2. Heat it up in an oven\n3. Enjoy warm cookies\n4. Learn how to bake cookies form somewhere else"},{"id":2,"title":"Pup Cake","description":"sweet little cake","ingredients":[{"amount":"2","amountUnits":"count","ingredientName":"eggs"}],"instructions":"Max cook"},{"id":"3","title":"Henan Lamian","description":"delicious noodles.","ingredients":[{"amountUnits":"pound","amount":"2","ingredientName":"noodle"},{"amount":"1","amountUnits":"pound","ingredientName":"breef"}],"instructions":"Chinese traditional foods."},{"id":"4","title":"Liangpi","description":"a delicious Xi'an food","ingredients":[{"amount":"2","amountUnits":"pound","ingredientName":"liangpi"},{"amount":"1","amountUnits":"pound","ingredientName":"cucumber"}],"instructions":"Chinese traditional foods."}]

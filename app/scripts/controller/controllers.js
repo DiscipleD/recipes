@@ -40,8 +40,8 @@ controllers.config(['$routeProvider', '$locationProvider', function($routeProvid
 		redirectTo: '/'
 	});
 		
-	// remove '#' from the url
-	$locationProvider.html5Mode(true);
+	// remove '#' from the url, but there will be occurs problem, angular route will conflict with node's route and can't handle the request.
+	//$locationProvider.html5Mode(true);
 }]);
 
 controllers.controller('ListCtrl', ['$scope', 'recipes', function($scope, recipes){
