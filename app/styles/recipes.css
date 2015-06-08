@@ -5,11 +5,29 @@ body{
 }
 
 .loader{
+    font-size: 2.75em;
     width:100%;
 	height:100%;
 	z-index: 999;
 	text-align: center;
-	margin: 0 auto;
-	top:50%;
-	float:left;
+	margin: auto;
+	left: 0 !important;
+	right: 0 !important;
+	top: 0 !important;
+	bottom: 0 !important;
+	position:fixed;
+	background-color: #656565;
+	opacity: 0.5;
+}
+
+.loader p{
+	position: fixed;
+	margin: 25% auto;
+	left: 0;
+	right: 0;
+}
+
+.rowHeaderLabel {
+	display: inline-block;
+	width: 99px;
 }
